@@ -30,7 +30,7 @@ export const AppProvider = ({ children }) => {
     })
 
     return (
-        <AppContext.Provider value={{ favorites, add, remove, set }}>
+        <AppContext.Provider value={{ favorites, add, remove, set }} data-testid="appProvider">
             { children }
         </AppContext.Provider>
     )

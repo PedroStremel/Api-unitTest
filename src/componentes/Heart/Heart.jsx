@@ -1,6 +1,7 @@
+
 import './Heart.css'
 
-function Heart({ onClick, selected = false }) {
+function Heart({ onClick, selected = false, testId = 'heart'}) {
     return (
         <svg 
             version="1.0"
@@ -8,9 +9,10 @@ function Heart({ onClick, selected = false }) {
             viewBox="0 0 24 24"
             className={`heart${selected ? ' heart-selected' : ''}`}
             onClick={onClick}
+            data-testid={testId}
             >
                 <g>
-                    <path fill-rule="evenodd" clip-rule="evenodd" 
+                    <path fillRule="evenodd" clipRule="evenodd" 
                     d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 
                     10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 
                     19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 
